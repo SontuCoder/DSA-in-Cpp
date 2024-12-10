@@ -1,9 +1,8 @@
-// Leetcode 69:-
-// Squer root of any element (int part): 
+
+// Squer root of any element (floating part): 
 // 25 => 5
 
 #include <iostream>
-#include<math.h>
 using namespace std;
 
 
@@ -28,12 +27,26 @@ int binarySearch(int s) {
     return result;
 }
 
+double root(int s){
+    int rootInt = binarySearch(s);
+
+    double f = 1;
+    double ans = rootInt;
+    for(int i =0; i<3; i++){
+        f=f/10;
+        for(double j=ans; j*j<s; j= j+f){
+            ans = j;
+        }
+    }
+    return ans;
+}
+
 
 int main() {
     int s;
     cout << "Enter the number: ";
     cin >> s;
-    int result = binarySearch(s);
+    double result = root(s);
     cout << "Element found at index: " << result << endl;
     return 0;
 }
