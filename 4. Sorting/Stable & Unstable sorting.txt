@@ -1,0 +1,34 @@
+Stable Sorting:
+Definition: A sorting algorithm is considered stable if it maintains the relative order of records with equal keys (or values). In other words, if two elements are equal and appear in a particular order in the input, they will appear in the same order in the output.
+
+Example:
+
+Input: [(3, 'A'), (1, 'B'), (3, 'C')]
+Output (after stable sort on the first element): [(1, 'B'), (3, 'A'), (3, 'C')]
+Examples of Stable Sorting Algorithms:
+
+Bubble Sort
+Merge Sort
+Insertion Sort
+Counting Sort
+Tim Sort (used in Python and Java's sort functions)
+Unstable Sorting:
+Definition: A sorting algorithm is considered unstable if it does not guarantee the relative order of records with equal keys. This means that the order of equal elements may be changed during sorting.
+
+Example:
+
+Input: [(3, 'A'), (1, 'B'), (3, 'C')]
+Output (after unstable sort on the first element): [(1, 'B'), (3, 'C'), (3, 'A')] (Note: Relative order of (3, 'A') and (3, 'C') has changed).
+Examples of Unstable Sorting Algorithms:
+
+Quick Sort
+Heap Sort
+Selection Sort
+Shell Sort (depending on implementation)
+Key Considerations:
+When to Use Stable Sorting:
+
+When preserving the relative order of elements with equal keys is important, such as when sorting multi-level data (e.g., sorting by last name and then by first name).
+When Unstable Sorting is Fine:
+
+When relative order doesn't matter or when sorting efficiency (time and space complexity) is more important than stability.

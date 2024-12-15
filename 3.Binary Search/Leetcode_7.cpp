@@ -1,3 +1,5 @@
+// Book Allocation problem:- 
+// Painter's Partition problem:-
 
 // Given an array 'arr' of integer numbers. where 'arr[i]' represents the number of peges in the i th' book. There are 'm' number of students and the task is to allocate all the books to their students. Allocate books in such a way that:
 
@@ -57,7 +59,6 @@ int minPage(vector<int> v, int s){
         }
     }
 }
-
 
 int main(){
     int n;
