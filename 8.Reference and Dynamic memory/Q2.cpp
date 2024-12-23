@@ -24,7 +24,7 @@ int main(){
         cin>>a[i];
     }
     cout<<getSum(a,n);
-    delete a; // free heap 
+    delete []a; // free heap 
 
     return 0;
 }
