@@ -36,6 +36,8 @@ int main(){
     m1[5] = "Five";
     m1[4] = "Four";
 
+    cout<<"HI"<<m1[1][0];
+
     cout << "The Elements of the map (Descending):" << endl;
     print1(m1);
 

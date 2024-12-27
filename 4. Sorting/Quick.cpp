@@ -11,39 +11,31 @@ void print(vector<int> v){
     } cout<<endl;
 }
 
-void marge(vector<int> &v, int l, int mid, int r){
-    int i = l;
-    int j = mid+1;
-    vector<int> a;
-    while(i<=mid && j<=r){
-        if(v[i]<v[j]){
-            a.push_back(v[i]);
+int partition(vector<int> &v, int l, int r) {
+    int pivot = v[l];
+    int i = l + 1;
+    int j = r;
+    while (i <= j) {
+        while (i <= r && v[i] <= pivot) {
             i++;
-        } else {
-            a.push_back(v[j]);
-            j++;
+        }
+        while (j >= l && v[j] > pivot) {
+            j--;
+        }
+        if (i < j) {
+            swap(v[i], v[j]);
         }
     }
-    while(i<=mid){
-        a.push_back(v[i]);
-        i++;
-    }
-    while(j<=r){
-        a.push_back(v[j]);
-        j++;
-    }
-    for (int k = 0; k < a.size(); k++) {
-        v[l + k] = a[k];
-    }
+    swap(v[l], v[j]);
+    return j;
 }
 
-void qiuickSort(vector<int> &v, int l, int r){ // takes O(nlogn) time, and O(n) space.
-    if(l<r){
-        int mid = l + (r-l)/2;
-        margeSort( v, l,mid);
-        margeSort(v, mid+1, r);
-        marge(v, l, mid, r);
-    }
+
+void quickSort(vector<int> &v, int l, int r){ // takes O(nlogn) time, and O(n) space.
+    if(l>=r) return;
+        int m = partition( v, l,r);
+        quickSort(v, m+1, r);
+        quickSort(v, l, m-1);
 }
 
 int main(){
