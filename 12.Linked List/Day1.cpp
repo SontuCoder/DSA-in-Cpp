@@ -3,6 +3,8 @@
 // Insert (front, end, mid / any position)
 // delete (any position)
 // print
+// Length
+// Reverse
 
 #include<iostream>
 using namespace std;
@@ -16,6 +18,14 @@ class Node{
     Node(int data){
         this->data = data;
         this->next = NULL;
+    }
+    ~Node() {
+        int value = this->data;
+        if (this->next != NULL) {
+            delete next;
+            this->next = NULL;
+        }
+        cout<<"Free "<<value<<" "<<endl;
     }
 };
 
@@ -71,6 +81,7 @@ void deleteNode(int pos, Node* &head, Node* &tail){
         if(head == NULL){
             tail = NULL;
         }
+        ptrPrev->next = NULL;
         delete ptrPrev;
         return;
     }
@@ -88,10 +99,12 @@ void deleteNode(int pos, Node* &head, Node* &tail){
     if(curr->next == NULL){
         tail= ptrPrev;
         ptrPrev->next = NULL;
+        curr->next = NULL;
         delete curr;
         return;
     }
     ptrPrev->next = curr->next;
+    curr->next = NULL;
     delete curr;
 }
 
@@ -107,6 +120,43 @@ void print(Node* &head){
     }
     cout<<endl;
 }
+
+// Length
+
+int lengthOfLinkedList(Node* &head){
+    if(head == NULL){
+        return 0;
+    }
+    Node* ptr = head;
+    int i = 1;
+    while(ptr->next != NULL){
+        i++;
+        ptr= ptr->next;
+    }
+    return i;
+}
+
+// Reverse 
+
+void reverse(Node*& head, Node* &tail){
+    if(head == NULL || head->next == NULL){
+        tail = head;
+        return;
+    }
+    Node* ptr = NULL;
+    Node* curr = head;
+    Node* new_node = head;
+    tail= head;
+    while(new_node != NULL){
+        new_node = new_node->next;
+        curr->next = ptr;
+        ptr = curr;
+        curr = new_node;
+    } 
+    head = ptr;
+}
+
+
 
 
 int main(){
@@ -124,7 +174,6 @@ int main(){
     insertNodeHead(15,head);
 
     print(head);
-
 
     insertNodeTail(20,tail);
     insertNodeTail(21,tail);
@@ -161,6 +210,12 @@ int main(){
     cout<<"Head "<<head->data<<endl;
     cout<<"Tail "<<tail->data<<endl;
 
-    
+    cout<<"Length:- "<<lengthOfLinkedList(head)<<endl;
+    reverse(head,tail);
+    print(head);
+
+    cout<<"Head "<<head->data<<endl;
+    cout<<"Tail "<<tail->data<<endl;
+
     return 0;
 }
