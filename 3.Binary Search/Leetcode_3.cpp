@@ -1,5 +1,5 @@
-// Find Pivot in a rotate array
-// IO:- [7,9,1,2,3] => 1
+// Find Pivot in a rotate array or number of roation 
+// IO:- [7,9,1,2,3] => 2
 
 
 #include <iostream>
