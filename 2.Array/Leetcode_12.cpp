@@ -18,13 +18,6 @@ bool sortRotate(vector<int> v){
             rotate++;
         }
     }
-    // if(rotate == 0){
-    //     return true;
-    // } else if(rotate == 1 && v[0]>v[v.size()-1]){
-    //     return true;
-    // }
-    // return false;
-
     if(v[0]<v[v.size()-1]){
         rotate++;
     }

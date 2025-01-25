@@ -58,6 +58,7 @@ int minPage(vector<int> v, int s){
             i = mid+1;
         }
     }
+    return ans; 
 }
 
 int main(){

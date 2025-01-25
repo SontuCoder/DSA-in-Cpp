@@ -26,8 +26,10 @@ int main()
     cout << "Enter the number: ";
     int n;
     cin >> n;
-    if (n == 0)
-        return 1;
+    if (n == 0){
+        cout<<1;
+        return 0;
+    }
     int m = n;
     int mask = 0;
     while (m != 0)

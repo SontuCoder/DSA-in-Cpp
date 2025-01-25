@@ -23,7 +23,7 @@ int main(){
     cout<<"Max between them: "<<max(5,6)<<endl;
     auto max = max_element(v.begin(),v.end()); // it gives reference.
     cout<<"Max in v: "<<*max<<endl;
-    // Smae for min , min_element;
+    // Same for min , min_element;
 
     array<int,10> a={3,1,3,6,5,3,1,5,3,8};
     cout<<"The array: ";

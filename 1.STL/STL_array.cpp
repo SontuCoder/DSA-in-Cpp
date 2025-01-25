@@ -11,7 +11,7 @@ int main(){
     cout<<endl <<"Array length: "<<n<< endl;
 
     // using for access element by index
-    cout<<"Element at index 2 : "<<a.at(1)<< endl;
+    cout<<"Element at index 1 : "<<a.at(1)<< endl;
 
     // STL Array empty or not
     cout<<"Array is empty : "<<a.empty()<< endl;

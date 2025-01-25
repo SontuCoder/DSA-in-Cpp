@@ -31,6 +31,6 @@ int main(){
         n/=2;
         if(a) count++;
     }
-    cout<<"The number of 1 bit be:"<<count;
+    cout<<"The number of 1 bit be:"<<bits(n)<<endl;
     return 0;
 }

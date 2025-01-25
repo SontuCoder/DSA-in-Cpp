@@ -22,6 +22,10 @@
 #include<math.h>
 using namespace std;
 
+bool myPow(int n){
+    return (n > 0) && ((n & (n - 1)) == 0);
+}
+
 int main(){
     cout << "Enter the number: ";
     int n;
@@ -37,5 +41,7 @@ int main(){
     if(j) {
     cout<<"False";
     }
+
+    cout<<endl<<"Ans "<<myPow(n);
     return 0;
 }

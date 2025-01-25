@@ -6,20 +6,17 @@
 #include<algorithm>
 using namespace std;
 
-bool isPosiblePos(vector<int> pos, int cow, int mid){
+bool isPosiblePos(vector<int> pos, int cow, int dist){
     int cowCount = 1;
     int lastPos = pos[0];
 
     for(int i = 0; i<pos.size(); i++){
-        if(pos[i]-lastPos >= mid){
+        if(pos[i]-lastPos >= dist){
             cowCount++;
-            if(cowCount == cow){
-                return true;
-            }
             lastPos = pos[i];
         }
     }
-    return false;
+    return cowCount>=cow;
 }
 
 

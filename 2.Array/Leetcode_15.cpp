@@ -1,7 +1,5 @@
 // Longest Subarray with given Sum K(Positives)
 
-
-
 #include<iostream>
 #include<vector>
 #include<unordered_map>
@@ -33,7 +31,7 @@ int longest2(vector<int> v, int k){
     int prePixSum = 0;
     for(int i = 0; i<v.size(); i++){
         prePixSum += v[i];
-        if(prePixSum ==k){
+        if(prePixSum == k){
             maxlen = i+1;
         }
         if(m.find(prePixSum-k) != m.end()){
@@ -42,6 +40,7 @@ int longest2(vector<int> v, int k){
         if(m.find(prePixSum) == m.end()){
             m[prePixSum] = i;
         }
+        cout<<maxlen<<endl;
     }
     return maxlen;
 }
@@ -58,6 +57,6 @@ int main(){
         cin>>a;
         v.push_back(a);
     }
-    cout<<"Longest subarray :- "<<longest2(v,3);
+    cout<<"Longest subarray :- "<<longest2(v,6);
     return 0;
 }

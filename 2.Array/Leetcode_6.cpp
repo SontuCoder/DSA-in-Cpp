@@ -16,7 +16,6 @@ void print(vector<int> v){
 vector<vector<int>> dupli(vector<int> v, int sum){
     int i=0, j=v.size()-1;
     sort(v.begin(),v.end());
-
     vector<vector<int>> v1;
     while(i<j){
         if(v[i]+v[j]==sum){

@@ -15,7 +15,6 @@ void print(vector<int> v){
 vector<int> dupli(vector<int> v, vector<int> w){
     int i=0;
     int j=0;
-
     vector<int> v1;
     while(i<v.size() && j<w.size()){
         if(v[i] == w[j]){
