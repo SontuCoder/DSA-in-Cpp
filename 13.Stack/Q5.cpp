@@ -26,6 +26,7 @@ void insert(stack<int> &s, int n){
     }
 }
 
+// Approach 2
 void insert1(stack<int> &s, int n){
     if(s.empty()){
         s.push(n);

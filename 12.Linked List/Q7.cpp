@@ -15,11 +15,6 @@ class Node{
 };
 
 
-void sortLl(Node* &head){
-    if(head == NULL || head->next == NULL) return;
-    
-}
-
 void print(Node* &head){
     Node* ptr = head;
     cout<<"The list be:- ";

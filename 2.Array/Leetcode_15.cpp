@@ -40,7 +40,6 @@ int longest2(vector<int> v, int k){
         if(m.find(prePixSum) == m.end()){
             m[prePixSum] = i;
         }
-        cout<<maxlen<<endl;
     }
     return maxlen;
 }

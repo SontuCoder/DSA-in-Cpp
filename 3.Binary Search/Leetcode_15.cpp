@@ -8,14 +8,12 @@ int upperBound(vector<int> &arr, int x, int n) {
 
     while (low <= high) {
         int mid = (low + high) / 2;
-        // maybe an answer
         if (arr[mid] > x) {
             ans = mid;
-            //look for smaller index on the left
             high = mid - 1;
         }
         else {
-            low = mid + 1; // look on the right
+            low = mid + 1; 
         }
     }
     return ans;

@@ -21,7 +21,7 @@ pair<int,int> insert(vector<int> &v, int n){
         if(v[mid]<n){
             i = mid+1;
             floor = v[mid];
-        } else if(v[mid]== n){
+        } else if(v[mid] == n){
             return {v[mid],v[mid]};
         } else {
             ceil = v[mid];

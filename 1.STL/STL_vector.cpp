@@ -69,8 +69,9 @@ int main() {
     print(v2);
 
     v.swap(v2);
-    cout << "After Swap v, v2: ";
+    cout << "After Swap v, v2 ; v1 =: ";
     print(v);
+    cout << "After Swap v, v2 ; v2 =: ";
     print(v2);
     return 0;
 }

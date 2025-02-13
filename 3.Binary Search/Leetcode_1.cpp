@@ -20,7 +20,7 @@ void print(const vector<int>& v) {
     cout << endl;
 }
 
-int first(const vector<int>& v, int s) {
+int first(vector<int>& v, int s) {
     int i = 0, j = v.size() - 1, mid, result = -1;
     while (i <= j) {
         mid = i + (j - i) / 2;

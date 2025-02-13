@@ -62,8 +62,8 @@ int main(){
     cout<<"The Elements of set: ";
     print1(s1);
 
-    cout<<"1 is iin the set:"<<s1.count(1)<<endl;
-    cout<<"2 is iin the set:"<<s1.count(2)<<endl;
+    cout<<"1 is in the set:"<<s1.count(1)<<endl;
+    cout<<"2 is in the set:"<<s1.count(2)<<endl;
 
     set<int>::iterator itr = s1.find(4);
     cout<<"value in iterator:"<<*itr<<endl;

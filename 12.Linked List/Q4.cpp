@@ -1,4 +1,4 @@
-// Detech Loop in LL
+// Loop Start Node of a Loop in LL
 
 #include<iostream>
 #include<map>

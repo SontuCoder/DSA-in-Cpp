@@ -36,13 +36,6 @@ bool detechLoop(Node* &head){
         }
         m[ptr] = true;
         ptr= ptr->next;
-
-        // if(m.find(ptr) == m.end()){
-        //     m[ptr] = true;
-        //     ptr= ptr->next;
-        // } else {
-        //     return true;
-        // }
     }
     return false;
 }

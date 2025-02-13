@@ -46,8 +46,6 @@ Node* reverse(Node* &head){
 
 
 Node* add(Node* head1, Node* head2){
-    print(head1);
-    print(head2);
     head1 = reverse(head1);
     head2 = reverse(head2);
     Node* head= new Node(-1);

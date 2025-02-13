@@ -11,7 +11,7 @@ string reverse(string s){
         v.push(s[i]);
     }
     s="";
-    while(v.size()!=0){
+    while(v.size()){
         s.push_back(v.top());
         v.pop();
     }
