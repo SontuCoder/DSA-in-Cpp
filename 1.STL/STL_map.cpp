@@ -45,15 +45,15 @@ int main(){
     cout << "The Elements of the map (Descending):" << endl;
     print1(m1);
 
-    m1.insert({6,"Hello"});  // second Ignored
+    m1.insert({6,"Hello"});  
     cout << "The Elements of the map (Descending):" << endl;
     print1(m1);
 
-    m1.erase(6);  // second Ignored
+    m1.erase(6); 
     cout << "The Elements of the map (Descending):" << endl;
     print1(m1);
 
-    m1.insert({6,"Hello"});  // second Ignored
+    m1.insert({6,"Hello"});  
     cout << "The Elements of the map (Descending):" << endl;
     print1(m1);
 
