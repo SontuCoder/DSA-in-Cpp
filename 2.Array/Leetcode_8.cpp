@@ -16,7 +16,7 @@ void print(vector<int> v){
 void dupli(vector<int> &v){
     int i=0, j=v.size()-1;
     int curr = 0;
-    while(curr<j){
+    while(curr<=j){
         if (v[curr]==2)
         {
             swap(v[curr],v[j]);

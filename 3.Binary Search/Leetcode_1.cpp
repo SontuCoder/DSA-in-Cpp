@@ -41,8 +41,8 @@ int last(const vector<int>& v, int s) {
     while (i <= j) {
         mid = i + (j - i) / 2;
         if (v[mid] == s) {
-            result = mid;  // Potential answer
-            i = mid + 1;   // Search right half for later occurrence
+            result = mid;  
+            i = mid + 1;   
         } else if (v[mid] < s) {
             i = mid + 1;
         } else {

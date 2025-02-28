@@ -8,7 +8,7 @@ using namespace std;
 int lCS(vector<int> v){
     sort(v.begin(), v.end());
     int maxLen = 0;
-    int len = 0;
+    int len = 1;
     for(int i = 0; i<v.size()-1; i++){
         if(v[i]+1 == v[i+1]){
             len++;
@@ -16,11 +16,11 @@ int lCS(vector<int> v){
             continue;
         }
         else {
-            maxLen = max(maxLen, len+1);
-            len = 0;
+            maxLen = max(maxLen, len);
+            len = 1;
         }
     }
-    maxLen = max(maxLen, len+1);
+    maxLen = max(maxLen, len);
     return maxLen;
 }
 
